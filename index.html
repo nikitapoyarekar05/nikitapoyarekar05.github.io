@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header class="header theme-background">
+      <nav class="nav">
+        <div class="logo">Nikita Poyrekar</div>
+        <div class="menu">
+          <ol class="menu__list">
+            <li class="menu-list--item">
+              <a class="menu-list--item__link" href="#home">Home</a>
+            </li>
+            <li class="menu-list--item">
+              <a class="menu-list--item__link" href="#projects">Projects</a>
+            </li>
+            <li class="menu-list--item">
+              <a class="menu-list--item__link" href="#skills">Skills</a>
+            </li>
+            <li class="menu-list--item">
+              <a class="menu-list--item__link" href="#contact">Contact</a>
+            </li>
+          </ol>
+        </div>
+      </nav>
+    </header>
+    <main class="main">
+      <section class="section section__home" id="home">
+        <h1 class="section__home__greeting">
+          Hi, I am <span class="theme-color">Nikita</span>
+        </h1>
+        <p class="section__home__role">
+          I am a
+          <span class="theme-color section__home__role-name"
+            >front-end focused developer</span
+          >
+          and I love turning ideas into smooth, user-friendly websites.
+        </p>
+        <p class="section__home__role">
+          Think of me as someone who builds digital experiences that just work.
+        </p>
+        <div class="section__home-buttons">
+          <div class="section__button">
+            <a href="#projects">
+              <button class="primary-button">View Projects</button></a
+            >
+          </div>
+          <div class="section__button">
+            <button id="downloadResume" class="secondary-button">
+              Download Resume
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="section section__projects" id="projects">
+        <h3 class="section__title">Projects</h3>
+        <div class="section__projects-container">
+          <div id="projectOne" class="section__projects-box">
+            <div class="section__projects-info-box">
+              <h4>Project Title 1</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <button
+                id="projectOne-details"
+                class="secondary-button section__projects-details-button"
+              >
+                View Details
+              </button>
+            </div>
+            <div class="section__projects-info-box">
+              <div class="section__projects-slideshow-container">
+                <div class="slide fade" data-project="projectOne">
+                  <img
+                    src="public/gallery/projectOne/image1.jpg"
+                    class="section__projects-slide-image"
+                    alt="Project Image 1"
+                  />
+                  <div>1 / 3</div>
+                </div>
+                <div class="slide fade" data-project="projectOne">
+                  <img
+                    src="public/gallery/projectOne/image2.jpg"
+                    class="section__projects-slide-image"
+                    alt="Project Image 2"
+                  />
+                  <div>2 / 3</div>
+                </div>
+                <div class="slide fade" data-project="projectOne">
+                  <img
+                    src="public/gallery/projectOne/image3.jpg"
+                    class="section__projects-slide-image"
+                    alt="Project Image 3"
+                  />
+                  <div>3 / 3</div>
+                </div>
+
+                <a class="prev" onclick="changeSlide(-1, 'projectOne')"
+                  >&#10094;</a
+                >
+                <a class="next" onclick="changeSlide(1, 'projectOne')"
+                  >&#10095;</a
+                >
+              </div>
+            </div>
+          </div>
+          <div id="projectTwo" class="section__projects-box">
+            <div class="section__projects-info-box">
+              <h4>Project Title 2</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <button
+                id="projectTwo-details"
+                class="secondary-button section__projects-details-button"
+              >
+                View Details
+              </button>
+            </div>
+            <div class="section__projects-info-box">
+              <div class="section__projects-slideshow-container">
+                <div id="slide2" class="slide fade" data-project="projectTwo">
+                  <img
+                    src="public/gallery/projectTwo/image1.jpg"
+                    class="section__projects-slide-image"
+                    alt="Project Image 1"
+                  />
+                  <div>1 / 3</div>
+                </div>
+                <div id="slide2" class="slide fade" data-project="projectTwo">
+                  <img
+                    src="public/gallery/projectTwo/image2.jpg"
+                    class="section__projects-slide-image"
+                    alt="Project Image 2"
+                  />
+                  <div>2 / 3</div>
+                </div>
+                <div id="slide2" class="slide fade" data-project="projectTwo">
+                  <img
+                    src="public/gallery/projectTwo/image3.jpg"
+                    class="section__projects-slide-image"
+                    alt="Project Image 3"
+                  />
+                  <div>3 / 3</div>
+                </div>
+
+                <a class="prev" onclick="changeSlide(-1, 'projectTwo')"
+                  >&#10094;</a
+                >
+                <a class="next" onclick="changeSlide(1, 'projectTwo')"
+                  >&#10095;</a
+                >
+              </div>
+            </div>
+          </div>
+          <div id="detailsModal1" class="section__projects-details">
+            <div class="section__projects-modal-content">
+              <span class="section__projects-modal-close" onclick="closeModal()"
+                >&times;</span
+              >
+              <h3>Project Title</h3>
+              <p>
+                Project description Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Accusantium, fugiat. Optio quae consequuntur
+                libero pariatur atque corporis eveniet. Fugiat nostrum
+                repellendus beatae iure? Doloremque eum quis repellat maiores
+                esse! Corporis.
+              </p>
+              <a
+                href="#projects"
+                onclick="event.preventDefault(); closeModal(document.getElementById('detailsModal1'));"
+              >
+                Project Link
+              </a>
+            </div>
+          </div>
+          <div id="detailsModal2" class="section__projects-details">
+            <div class="section__projects-modal-content">
+              <span class="section__projects-modal-close" onclick="closeModal()"
+                >&times;</span
+              >
+              <h3>Project Title</h3>
+              <p>
+                Project description Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Accusantium, fugiat. Optio quae consequuntur
+                libero pariatur atque corporis eveniet. Fugiat nostrum
+                repellendus beatae iure? Doloremque eum quis repellat maiores
+                esse! Corporis.
+              </p>
+              <a
+                href="#projects"
+                onclick="event.preventDefault(); closeModal(document.getElementById('detailsModal2'));"
+              >
+                Project Link
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="skills">
+        <h3 class="section__title">Skills</h3>
+      </section>
+      <section class="section" id="contact">
+        <h3 class="section__title">Contact</h3>
+      </section>
+    </main>
+    <footer class="footer theme-background">
+      <div class="footer__upper">
+        <div class="footer_info-container">
+          <div class="footer__heading">Nikita Poyrekar</div>
+          <div class="footer__description">
+            Building accessible products that people love
+          </div>
+        </div>
+        <div>
+          <div class="footer__heading">Social</div>
+          <div class="footer__social">
+            <a href="github.com"
+              ><img
+                class="footer__social-icon"
+                src="public/gitHub.svg"
+                alt="GitHub icon"
+            /></a>
+            <a href="linkedin.com">
+              <img
+                class="footer__social-icon"
+                src="public/linkedIn.svg"
+                alt="LinkedIn icon"
+            /></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__lower">
+        <p>&copy; 2025 Nikita Poyarekar | Designed with ❤️</p>
+      </div>
+    </footer>
+    <script src="index.js" async defer></script>
+  </body>
+</html>
