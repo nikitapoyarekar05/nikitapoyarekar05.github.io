@@ -1,241 +1,467 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title></title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="index.css" />
-  </head>
-  <body>
-    <header class="header theme-background">
-      <nav class="nav">
-        <div class="logo">Nikita Poyrekar</div>
-        <div class="menu">
-          <ol class="menu__list">
-            <li class="menu-list--item">
-              <a class="menu-list--item__link" href="#home">Home</a>
-            </li>
-            <li class="menu-list--item">
-              <a class="menu-list--item__link" href="#projects">Projects</a>
-            </li>
-            <li class="menu-list--item">
-              <a class="menu-list--item__link" href="#skills">Skills</a>
-            </li>
-            <li class="menu-list--item">
-              <a class="menu-list--item__link" href="#contact">Contact</a>
-            </li>
-          </ol>
-        </div>
-      </nav>
-    </header>
-    <main class="main">
-      <section class="section section__home" id="home">
-        <h1 class="section__home__greeting">
-          Hi, I am <span class="theme-color">Nikita</span>
-        </h1>
-        <p class="section__home__role">
-          I am a
-          <span class="theme-color section__home__role-name"
-            >front-end focused developer</span
-          >
-          and I love turning ideas into smooth, user-friendly websites.
-        </p>
-        <p class="section__home__role">
-          Think of me as someone who builds digital experiences that just work.
-        </p>
-        <div class="section__home-buttons">
-          <div class="section__button">
-            <a href="#projects">
-              <button class="primary-button">View Projects</button></a
-            >
-          </div>
-          <div class="section__button">
-            <button id="downloadResume" class="secondary-button">
-              Download Resume
-            </button>
-          </div>
-        </div>
-      </section>
-      <section class="section section__projects" id="projects">
-        <h3 class="section__title">Projects</h3>
-        <div class="section__projects-container">
-          <div id="projectOne" class="section__projects-box">
-            <div class="section__projects-info-box">
-              <h4>Project Title 1</h4>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-              <button
-                id="projectOne-details"
-                class="secondary-button section__projects-details-button"
-              >
-                View Details
-              </button>
-            </div>
-            <div class="section__projects-info-box">
-              <div class="section__projects-slideshow-container">
-                <div class="slide fade" data-project="projectOne">
-                  <img
-                    src="public/gallery/projectOne/image1.jpg"
-                    class="section__projects-slide-image"
-                    alt="Project Image 1"
-                  />
-                  <div>1 / 3</div>
-                </div>
-                <div class="slide fade" data-project="projectOne">
-                  <img
-                    src="public/gallery/projectOne/image2.jpg"
-                    class="section__projects-slide-image"
-                    alt="Project Image 2"
-                  />
-                  <div>2 / 3</div>
-                </div>
-                <div class="slide fade" data-project="projectOne">
-                  <img
-                    src="public/gallery/projectOne/image3.jpg"
-                    class="section__projects-slide-image"
-                    alt="Project Image 3"
-                  />
-                  <div>3 / 3</div>
-                </div>
 
-                <a class="prev" onclick="changeSlide(-1, 'projectOne')"
-                  >&#10094;</a
-                >
-                <a class="next" onclick="changeSlide(1, 'projectOne')"
-                  >&#10095;</a
-                >
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Nikita Deepak Poyrekar</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles/index.css">
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/home.css">
+  <link rel="stylesheet" href="styles/projects.css">
+  <link rel="stylesheet" href="styles/skills.css">
+  <link rel="stylesheet" href="styles/contact.css">
+  <link rel="stylesheet" href="styles/footer.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+</head>
+
+<body>
+  <header class="header theme-background">
+    <nav class="nav">
+      <div class="logo">Nikita Poyrekar</div>
+      <div class="menu">
+        <ol class="menu__list">
+          <li class="menu-list--item">
+            <a class="menu-list--item__link" href="#home">Home</a>
+          </li>
+          <li class="menu-list--item">
+            <a class="menu-list--item__link" href="#projects">Projects</a>
+          </li>
+          <li class="menu-list--item">
+            <a class="menu-list--item__link" href="#skills">Skills</a>
+          </li>
+          <li class="menu-list--item">
+            <a class="menu-list--item__link" href="#contact">Contact</a>
+          </li>
+        </ol>
+      </div>
+    </nav>
+  </header>
+  <main class="main">
+    <section class="section section__home" id="home">
+      <h1 class="section__home__greeting">
+        Hi, I am <span class="theme-color">Nikita</span>
+      </h1>
+      <p class="section__home__role">
+        I am a
+        <span class="theme-color section__home__role-name">front-end focused developer</span>
+        and I love turning ideas into smooth, user-friendly websites.
+      </p>
+      <p class="section__home__role">
+        Think of me as someone who builds digital experiences that just work.
+      </p>
+      <div class="section__home-buttons">
+        <div class="section__button">
+          <a href="#projects">
+            <button class="primary-button">View Projects</button></a>
+        </div>
+        <div class="section__button">
+          <button id="downloadResume" class="secondary-button">
+            Download Resume
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="section section__projects" id="projects">
+      <h3 class="section__title">Projects</h3>
+      <div class="section__projects--timeline-container">
+        <div class="section__projects--timeline">
+
+          <div class="section__projects--timeline-item">
+            <div class="section__projects--timeline-date">May 2023 - Oct 2024</div>
+            <div class="section__projects--timeline-content">
+              <div class="section__projects--info-box">
+                <h4>Corporate Banking Digital Portal</h4>
+                <p class="section__projects--info">Developed a Corporate Digital Portal for a leading global bank.</p>
+                <button id="projectOne-details" class="secondary-button section__projects-details-button">
+                  View Details
+                </button>
               </div>
             </div>
           </div>
-          <div id="projectTwo" class="section__projects-box">
-            <div class="section__projects-info-box">
-              <h4>Project Title 2</h4>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-              <button
-                id="projectTwo-details"
-                class="secondary-button section__projects-details-button"
-              >
-                View Details
-              </button>
-            </div>
-            <div class="section__projects-info-box">
-              <div class="section__projects-slideshow-container">
-                <div id="slide2" class="slide fade" data-project="projectTwo">
-                  <img
-                    src="public/gallery/projectTwo/image1.jpg"
-                    class="section__projects-slide-image"
-                    alt="Project Image 1"
-                  />
-                  <div>1 / 3</div>
-                </div>
-                <div id="slide2" class="slide fade" data-project="projectTwo">
-                  <img
-                    src="public/gallery/projectTwo/image2.jpg"
-                    class="section__projects-slide-image"
-                    alt="Project Image 2"
-                  />
-                  <div>2 / 3</div>
-                </div>
-                <div id="slide2" class="slide fade" data-project="projectTwo">
-                  <img
-                    src="public/gallery/projectTwo/image3.jpg"
-                    class="section__projects-slide-image"
-                    alt="Project Image 3"
-                  />
-                  <div>3 / 3</div>
-                </div>
 
-                <a class="prev" onclick="changeSlide(-1, 'projectTwo')"
-                  >&#10094;</a
-                >
-                <a class="next" onclick="changeSlide(1, 'projectTwo')"
-                  >&#10095;</a
-                >
+          <div class="section__projects--timeline-item">
+            <div class="section__projects--timeline-date">Jun 2021 - Apr 2023</div>
+            <div class="section__projects--timeline-content">
+              <div class="section__projects--info-box">
+                <h4>Digital Vehicle Financing Application</h4>
+                <p class="section__projects--info">Developed a web application that enables customers to easily apply for credit to finance their
+                  vehicle purchases.</p>
+                <button id="projectTwo-details" class="secondary-button section__projects-details-button">
+                  View Details
+                </button>
               </div>
             </div>
           </div>
-          <div id="detailsModal1" class="section__projects-details">
-            <div class="section__projects-modal-content">
-              <span class="section__projects-modal-close" onclick="closeModal()"
-                >&times;</span
-              >
-              <h3>Project Title</h3>
-              <p>
-                Project description Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Accusantium, fugiat. Optio quae consequuntur
-                libero pariatur atque corporis eveniet. Fugiat nostrum
-                repellendus beatae iure? Doloremque eum quis repellat maiores
-                esse! Corporis.
-              </p>
-              <a
-                href="#projects"
-                onclick="event.preventDefault(); closeModal(document.getElementById('detailsModal1'));"
-              >
-                Project Link
-              </a>
+
+          <div class="section__projects--timeline-item">
+            <div class="section__projects--timeline-date">Sep 2020 - Jun 2021</div>
+            <div class="section__projects--timeline-content">
+              <div class="section__projects--info-box">
+                <h4>Retail Marketplace</h4>
+                <p class="section__projects--info">
+                  Connecting Retail Tenants and Landlords: A Marketplace Solution.</p>
+                <button id="projectThree-details" class="secondary-button section__projects-details-button">
+                  View Details
+                </button>
+              </div>
             </div>
           </div>
-          <div id="detailsModal2" class="section__projects-details">
-            <div class="section__projects-modal-content">
-              <span class="section__projects-modal-close" onclick="closeModal()"
-                >&times;</span
-              >
-              <h3>Project Title</h3>
-              <p>
-                Project description Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Accusantium, fugiat. Optio quae consequuntur
-                libero pariatur atque corporis eveniet. Fugiat nostrum
-                repellendus beatae iure? Doloremque eum quis repellat maiores
-                esse! Corporis.
-              </p>
-              <a
-                href="#projects"
-                onclick="event.preventDefault(); closeModal(document.getElementById('detailsModal2'));"
-              >
-                Project Link
-              </a>
+
+        </div>
+        <div id="detailsModal1" class="section__projects-details">
+          <div class="section__projects-modal-content">
+            <span class="section__projects-modal-close" onclick="closeModal()">&times;</span>
+            <h3>Corporate Banking Digital Portal</h3>
+            <div class="section__projects-slideshow-container">
+              <div class="slide fade" data-project="projectOne">
+                <img src="public/gallery/projectOne/image1.jpg" class="section__projects-slide-image"
+                  alt="Project Image 1" />
+                <div>1 / 3</div>
+              </div>
+              <div class="slide fade" data-project="projectOne">
+                <img src="public/gallery/projectOne/image2.jpg" class="section__projects-slide-image"
+                  alt="Project Image 2" />
+                <div>2 / 3</div>
+              </div>
+              <div class="slide fade" data-project="projectOne">
+                <img src="public/gallery/projectOne/image3.jpg" class="section__projects-slide-image"
+                  alt="Project Image 3" />
+                <div>3 / 3</div>
+              </div>
+
+              <a class="prev" onclick="changeSlide(-1, 'projectOne')">&#10094;</a>
+              <a class="next" onclick="changeSlide(1, 'projectOne')">&#10095;</a>
             </div>
+            <p>
+              This project involved the development of a comprehensive Corporate Digital Portal for a major global
+              bank, providing users with a suite of essential financial management tools. Key functionalities included
+              account summary viewing, payment scheduling, challan and fixed deposit creation, chequebook and demand
+              draft requests, detailed report generation, and the execution of both single and bulk payments to
+              various recipients, such as customers, vendors, and employees.
+            </p>
+            <a href="https://www.axisbank.com/corporate" target="_blank"
+              onclick="closeModal(document.getElementById('detailsModal1'));">
+              Project Link
+            </a>
           </div>
         </div>
-      </section>
-      <section class="section" id="skills">
-        <h3 class="section__title">Skills</h3>
-      </section>
-      <section class="section" id="contact">
-        <h3 class="section__title">Contact</h3>
-      </section>
-    </main>
-    <footer class="footer theme-background">
-      <div class="footer__upper">
-        <div class="footer_info-container">
-          <div class="footer__heading">Nikita Poyrekar</div>
-          <div class="footer__description">
-            Building accessible products that people love
+        <div id="detailsModal2" class="section__projects-details">
+          <div class="section__projects-modal-content">
+            <span class="section__projects-modal-close" onclick="closeModal()">&times;</span>
+            <h3>Digital Vehicle Financing Application</h3>
+            <div class="section__projects-slideshow-container">
+              <div class="slide fade" data-project="projectTwo">
+                <img src="public/gallery/projectTwo/image1.jpg" class="section__projects-slide-image"
+                  alt="Project Image 1" />
+                <div>1 / 3</div>
+              </div>
+              <div class="slide fade" data-project="projectTwo">
+                <img src="public/gallery/projectTwo/image2.jpg" class="section__projects-slide-image"
+                  alt="Project Image 2" />
+                <div>2 / 3</div>
+              </div>
+              <div class="slide fade" data-project="projectTwo">
+                <img src="public/gallery/projectTwo/image3.jpg" class="section__projects-slide-image"
+                  alt="Project Image 3" />
+                <div>3 / 3</div>
+              </div>
+
+              <a class="prev" onclick="changeSlide(-1, 'projectTwo')">&#10094;</a>
+              <a class="next" onclick="changeSlide(1, 'projectTwo')">&#10095;</a>
+            </div>
+            <p>
+              Developed a web application that enables customers to easily apply for credit to finance their vehicle
+              purchases. This e-commerce platform allows customers to select their preferred vehicle, customize it,
+              choose a financing plan, and submit their credit application directly through the website.
+            </p>
+            <a href="https://www.ford.com/finance/" target="_blank"
+              onclick="closeModal(document.getElementById('detailsModal2'));">
+              Project Link
+            </a>
           </div>
         </div>
-        <div>
-          <div class="footer__heading">Social</div>
-          <div class="footer__social">
-            <a href="github.com"
-              ><img
-                class="footer__social-icon"
-                src="public/gitHub.svg"
-                alt="GitHub icon"
-            /></a>
-            <a href="linkedin.com">
-              <img
-                class="footer__social-icon"
-                src="public/linkedIn.svg"
-                alt="LinkedIn icon"
-            /></a>
+        <div id="detailsModal3" class="section__projects-details">
+          <div class="section__projects-modal-content">
+            <span class="section__projects-modal-close" onclick="closeModal()">&times;</span>
+            <h3>Retail Marketplace</h3>
+            <div class="section__projects-slideshow-container">
+              <div class="slide fade" data-project="projectThree">
+                <img src="public/gallery/projectThree/image1.jpg" class="section__projects-slide-image"
+                  alt="Project Image 1" />
+                <div>1 / 10</div>
+              </div>
+              <div class="slide fade" data-project="projectThree">
+                <img src="public/gallery/projectThree/image2.jpg" class="section__projects-slide-image"
+                  alt="Project Image 2" />
+                <div>2 / 10</div>
+              </div>
+              <div class="slide fade" data-project="projectThree">
+                <img src="public/gallery/projectThree/image3.jpg" class="section__projects-slide-image"
+                  alt="Project Image 3" />
+                <div>3 / 10</div>
+              </div>
+              <div class="slide fade" data-project="projectThree">
+                <img src="public/gallery/projectThree/image4.jpg" class="section__projects-slide-image"
+                  alt="Project Image 3" />
+                <div>4 / 10</div>
+              </div>
+              <div class="slide fade" data-project="projectThree">
+                <img src="public/gallery/projectThree/image5.jpg" class="section__projects-slide-image"
+                  alt="Project Image 3" />
+                <div>5 / 10</div>
+              </div>
+              <div class="slide fade" data-project="projectThree">
+                <img src="public/gallery/projectThree/image6.jpg" class="section__projects-slide-image"
+                  alt="Project Image 3" />
+                <div>6 / 10</div>
+              </div>
+              <div class="slide fade" data-project="projectThree">
+                <img src="public/gallery/projectThree/image7.jpg" class="section__projects-slide-image"
+                  alt="Project Image 3" />
+                <div>7 / 10</div>
+              </div>
+              <div class="slide fade" data-project="projectThree">
+                <img src="public/gallery/projectThree/image8.jpg" class="section__projects-slide-image"
+                  alt="Project Image 3" />
+                <div>8 / 10</div>
+              </div>
+              <div class="slide fade" data-project="projectThree">
+                <img src="public/gallery/projectThree/image9.jpg" class="section__projects-slide-image"
+                  alt="Project Image 3" />
+                <div>9 / 10</div>
+              </div>
+              <div class="slide fade" data-project="projectThree">
+                <img src="public/gallery/projectThree/image10.jpg" class="section__projects-slide-image"
+                  alt="Project Image 3" />
+                <div>10 / 10</div>
+              </div>
+
+
+              <a class="prev" onclick="changeSlide(-1, 'projectThree')">&#10094;</a>
+              <a class="next" onclick="changeSlide(1, 'projectThree')">&#10095;</a>
+            </div>
+            <p>
+              Developed a web application specifically for the commercial real estate industry, which connects retail
+              tenants with property owners and brokers. This platform offers potential tenants advanced search and
+              collaboration tools to help them find their ideal space. Meanwhile, it provides landlords and brokers with
+              marketing and analytics capabilities to optimize their listings and connect with qualified tenants.
+            </p>
+            <a href="https://www.vts.com/vts-market" target="_blank"
+              onclick="closeModal(document.getElementById('detailsModal3'));">
+              Project Link
+            </a>
           </div>
         </div>
       </div>
-      <div class="footer__lower">
-        <p>&copy; 2025 Nikita Poyarekar | Designed with ❤️</p>
+    </section>
+    <section class="section" id="skills">
+      <h3 class="section__title">Skills</h3>
+      <div class="section__skills-tabs">
+        <div class="section__skills-tab-links">
+          <button class="section__skills-tab-link active" onclick="openTab(event, 'Tab1')">
+            Programming Languages
+          </button>
+          <button class="section__skills-tab-link" onclick="openTab(event, 'Tab2')">
+            Frameworks
+          </button>
+          <button class="section__skills-tab-link" onclick="openTab(event, 'Tab3')">
+            Tools
+          </button>
+        </div>
+
+        <div class="section__skills-tab-content" id="Tab1">
+          <p class="section__skills__progress-para">
+            Primary
+          <div class="section__skills__progress-bar">
+            <div style="width: 85%;">TypeScript 85%</div>
+          </div>
+          <div class="section__skills__progress-bar">
+            <div style="width: 80%;">JavaScript 80%</div>
+          </div>
+          <div class="section__skills__progress-bar">
+            <div style="width: 65%;">Python 65%</div>
+          </div>
+          </p>
+          <p class="section__skills__progress-para">
+            Database
+          <div class="section__skills__progress-bar">
+            <div style="width: 40%;">Structured Query language (SQL) 40%</div>
+          </div>
+          </p>
+          <p class="section__skills__progress-para">
+            Markup and Styling
+          <div class="section__skills__progress-bar">
+            <div style="width: 70%;">HTML5 and CSS3 70%</div>
+          </div>
+          </p>
+        </div>
+        <div class="section__skills-tab-content" id="Tab2" style="display: none">
+          <p class="section__skills__progress-para">
+            Front-end
+          <div class="section__skills__progress-bar">
+            <div style="width: 80%;">React 80%</div>
+          </div>
+          <div class="section__skills__progress-bar">
+            <div style="width: 70%;">Next 70%</div>
+          </div>
+          <div class="section__skills__progress-bar">
+            <div style="width: 50%;">Ant Design 50%</div>
+          </div>
+          <div class="section__skills__progress-bar">
+            <div style="width: 65%;">Material UI 65%</div>
+          </div>
+          </p>
+          <p class="section__skills__progress-para">
+            Backend
+          <div class="section__skills__progress-bar">
+            <div style="width: 40%;">Flask 40%</div>
+          </div>
+          <div class="section__skills__progress-bar">
+            <div style="width: 50%;">Strapi CMS 50%</div>
+          </div>
+          </p>
+          <p class="section__skills__progress-para">
+            CSS
+          <div class="section__skills__progress-bar">
+            <div style="width: 30%;">Tailwind CSS 30%</div>
+          </div>
+          <div class="section__skills__progress-bar">
+            <div style="width: 50%;">BootStrap 50%</div>
+          </div>
+          </p>
+        </div>
+        <div class="section__skills-tab-content" id="Tab3" style="display: none">
+          <p class="section__skills__progress-para">
+            Test
+          <div class="section__skills__progress-bar">
+            <div style="width: 80%;">Cypress 80%</div>
+          </div>
+          <div class="section__skills__progress-bar">
+            <div style="width: 60%;">JEST 60%</div>
+          </div>
+          <div class="section__skills__progress-bar">
+            <div style="width: 60%;">React Testing library 60%</div>
+          </div>
+          <div class="section__skills__progress-bar">
+            <div style="width: 60%;">POSTMAN 60%</div>
+          </div>
+          </p>
+          <p class="section__skills__progress-para">
+            Build and Deployment
+          <div class="section__skills__progress-bar">
+            <div style="width: 50%;">Webpack 50%</div>
+          </div>
+          <div class="section__skills__progress-bar">
+            <div style="width: 50%;">Gulp 50%</div>
+          </div>
+          <div class="section__skills__progress-bar">
+            <div style="width: 50%;">Jenkins 50%</div>
+          </div>
+          </p>
+          <p class="section__skills__progress-para">
+            Version control
+          <div class="section__skills__progress-bar">
+            <div style="width: 80%;">Git and GitHub 80%</div>
+          </div>
+          <div class="section__skills__progress-bar">
+            <div style="width: 90%;">Bitbucket 90%</div>
+          </div>
+          </p>
+          <p class="section__skills__progress-para">
+            Monitoring and Analysis
+          <div class="section__skills__progress-bar">
+            <div style="width: 50%;">Sentry 50%</div>
+          </div>
+          <div class="section__skills__progress-bar">
+            <div style="width: 60%;">Google analytics 60%</div>
+          </div>
+          </p>
+          <p class="section__skills__progress-para">
+            Project management
+          <div class="section__skills__progress-bar">
+            <div style="width: 85%;">JIRA 85%</div>
+          </div>
+          <div class="section__skills__progress-bar">
+            <div style="width: 70%;">Confluence 70%</div>
+          </div>
+          <div class="section__skills__progress-bar">
+            <div style="width: 55%;">Rally 30%</div>
+          </div>
+          <div class="section__skills__progress-bar">
+            <div style="width: 50%;">Airtable 50%</div>
+          </div>
+          </p>
+          <p class="section__skills__progress-para">
+            UI/UX & Design
+          <div class="section__skills__progress-bar">
+            <div style="width: 70%;">Figma 70%</div>
+          </div>
+          <div class="section__skills__progress-bar">
+            <div style="width: 50%;">Invision 50%</div>
+          </div>
+          </p>
+
+        </div>
       </div>
-    </footer>
-    <script src="index.js" async defer></script>
-  </body>
+    </section>
+    <section class="section" id="contact">
+      <h3 class="section__title">Contact</h3>
+      <div class="section__contact">
+        <form class="section__contact-form">
+          <div class="section__contact__form-group">
+            <label for="name" class="section__contact__form-label">Name*</label>
+            <input type="text" id="name" class="section__contact__form-input" />
+            <div class="section__contact__form-error-message" id="name-error"></div>
+          </div>
+
+          <div class="section__contact__form-group">
+            <label for="email" class="section__contact__form-label">Email*</label>
+            <input type="email" id="email" class="section__contact__form-input" />
+            <div class="section__contact__form-error-message" id="email-error"></div>
+          </div>
+
+          <div class="section__contact__form-group">
+            <label for="message" class="section__contact__form-label">Message*</label>
+            <textarea id="message" class="section__contact__form-textarea"></textarea>
+            <div class="section__contact__form-error-message" id="message-error"></div>
+          </div>
+
+          <div class="section__contact__form-status-container"></div>
+          <button type="submit" class="primary-button submit">Submit</button>
+          <div class="success" id="successMessage"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="footer theme-background">
+    <div class="footer__upper">
+      <div class="footer_info-container">
+        <div class="footer__heading">Nikita Poyrekar</div>
+        <div class="footer__description">
+          Building accessible products that people love
+        </div>
+      </div>
+      <div>
+        <div class="footer__heading">Social</div>
+        <div class="footer__social">
+          <a href="github.com"><img class="footer__social-icon" src="public/gitHub.svg" alt="GitHub icon" /></a>
+          <a href="linkedin.com">
+            <img class="footer__social-icon" src="public/linkedIn.svg" alt="LinkedIn icon" /></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__lower">
+      <p>&copy; 2025 Nikita Poyarekar | Designed with ❤️</p>
+    </div>
+  </footer>
+  <!-- <script src="index.js" async defer></script> -->
+  <script src="js/home.js"></script>
+  <script src="js/projects.js"></script>
+  <script src="js/skills.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+
 </html>

@@ -1,0 +1,27 @@
+.section__home {
+  display: flex;
+  flex-direction: column;
+}
+
+.section__home__greeting {
+  font-size: 4rem;
+  margin-bottom: 0;
+}
+
+.section__home__role {
+  margin: 0;
+}
+
+.section__home__role-name {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.section__home-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 1rem 0;
+  gap: 1rem;
+  align-items: center;
+}

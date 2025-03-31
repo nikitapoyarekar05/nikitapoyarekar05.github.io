@@ -1,0 +1,240 @@
+/* changelog */
+.section__projects--timeline-container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.section__projects--timeline-container h1 {
+  font-size: 2rem;
+  margin-bottom: 0.625rem;
+}
+
+.section__projects--timeline-container p {
+  font-size: 0.75rem;
+  color: #666;
+  margin-bottom: 0.625rem;
+}
+
+.section__projects--timeline-container a {
+  font-size: 0.75rem;
+}
+
+.section__projects--timeline {
+  position: relative;
+  margin: 1.25rem 0;
+  padding: 0;
+}
+
+.section__projects--timeline:before {
+  content: "";
+  position: absolute;
+  width: 0.125rem;
+  background-color: black;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: 0.5rem;
+}
+
+.section__projects--timeline-item {
+  margin-bottom: 1.25rem;
+  position: relative;
+  width: calc(50% + 1px);
+  padding-right: 1.5rem;
+  text-align: right;
+}
+
+.section__projects--timeline-item .section__projects--timeline-date {
+  font-size: 0.9rem;
+}
+
+.section__projects--timeline-item .section__projects--timeline-content {
+  font-size: 1rem;
+  background-color: #fdc435;
+  border-radius: 0.5rem;
+  padding: 0.625rem;
+  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.05);
+  display: inline-block;
+}
+
+.section__projects--timeline-item:nth-child(even) {
+  left: calc(50% - 1px);
+  text-align: left;
+  padding-left: 1.2rem;
+  padding-right: 0;
+}
+
+.section__projects--timeline-item:nth-child(even)
+  .section__projects--timeline-content {
+  margin-left: 0;
+}
+
+.section__projects--timeline-item:before {
+  content: "";
+  position: absolute;
+  width: 0.625rem;
+  height: 0.625rem;
+  right: 0.6rem;
+  background-color: #fdc435;
+  border-radius: 50%;
+  top: 0.625rem;
+}
+
+.section__projects--timeline-item:nth-child(even):before {
+  left: 0.25rem;
+  right: auto;
+}
+
+.section__projects--info-box {
+  padding: 0.5rem;
+}
+
+.section__projects--info {
+  font-size: 0.75rem !important;
+}
+
+.section__projects-details-button {
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.section__projects-slideshow-container {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 0.625rem;
+  min-height: 10rem;
+}
+
+.slide {
+  display: none;
+  position: relative;
+}
+
+.section__projects-slide-image {
+  width: 100%;
+  height: 20rem;
+  border-radius: 0.625rem;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.25rem;
+  padding: 0.625rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  border: none;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+.prev {
+  left: 0.625rem;
+}
+
+.next {
+  right: 0.625rem;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.fade {
+  animation: fadeEffect 1.5s ease-in-out;
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.section__projects-details {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.section__projects-modal-content {
+  background-color: white;
+  margin: 15% auto;
+  padding: 1.25rem;
+  border: 0.063rem solid #888;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 0.625rem;
+}
+
+.section__projects-modal-close {
+  color: #fdc435;
+  float: right;
+  font-size: 1.75rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.section__projects-modal-content-close:hover,
+.section__projects-modal-content-close:focus {
+  color: black;
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .section__projects--timeline-item {
+    width: 100%;
+    text-align: left;
+    padding-left: 1.25rem;
+  }
+
+  .section__projects--timeline-item:nth-child(even) {
+    left: 0;
+    padding-left: 1.25rem;
+  }
+
+  .section__projects--timeline:before {
+    left: 0.625rem;
+  }
+
+  .section__projects--timeline-item:before {
+    left: 0.313rem;
+  }
+
+  .section__projects--timeline-item:nth-child(even):before {
+    left: 0.313rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section__projects-info-box {
+    width: 100%;
+  }
+
+  .section__projects-info-box:nth-child(1) {
+    order: 2;
+    padding-top: 0;
+  }
+
+  .section__projects-info-box:nth-child(2) {
+    order: 1;
+    padding-bottom: 0;
+  }
+}
